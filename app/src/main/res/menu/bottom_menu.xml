@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_memo"
+        android:enabled="true"
+        android:title="장바구니"/>
+
+    <item
+        android:id="@+id/tab_list"
+        android:enabled="true"
+        android:title="완료목록"/>
+
+    <item
+        android:id="@+id/tab_stat"
+        android:enabled="true"
+        android:title="통계"/>
+</menu>
