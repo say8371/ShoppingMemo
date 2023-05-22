@@ -1,5 +1,6 @@
-package com.myiy.shoppingmemo.main.model;
+package com.myiy.shoppingmemo.domain.main.model;
 
+import io.realm.RealmModel;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 

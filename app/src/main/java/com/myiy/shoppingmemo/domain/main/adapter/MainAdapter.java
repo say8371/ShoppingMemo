@@ -1,10 +1,9 @@
-package com.myiy.shoppingmemo.main.adapter;
+package com.myiy.shoppingmemo.domain.main.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -13,7 +12,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.myiy.shoppingmemo.R;
-import com.myiy.shoppingmemo.main.model.ShoppingList;
+import com.myiy.shoppingmemo.domain.main.model.ShoppingList;
 
 import java.util.ArrayList;
 
@@ -44,7 +43,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ShoppingList item = mData.get(position);
 
-        holder.pumNameTextView.setText(item.getPumName());
+        holder.pumNameTextView.setText(item.getItemName());
         holder.amtEditText.setText(Long.toString(item.getAmt()));
     }
 

@@ -1,4 +1,4 @@
-package com.myiy.shoppingmemo.main.fragment;
+package com.myiy.shoppingmemo.domain.main.fragment;
 
 import androidx.lifecycle.ViewModelProvider;
 
@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.myiy.shoppingmemo.R;
-import com.myiy.shoppingmemo.main.viewmodel.MainViewModel;
+import com.myiy.shoppingmemo.domain.main.viewmodel.MainViewModel;
 
 public class MainFragment extends Fragment {
 

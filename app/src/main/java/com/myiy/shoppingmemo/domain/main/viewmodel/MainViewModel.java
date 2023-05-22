@@ -1,10 +1,10 @@
-package com.myiy.shoppingmemo.main.viewmodel;
+package com.myiy.shoppingmemo.domain.main.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.myiy.shoppingmemo.main.model.ShoppingList;
+import com.myiy.shoppingmemo.domain.main.model.ShoppingList;
 
 import io.realm.Realm;
 
