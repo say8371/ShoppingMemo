@@ -4,7 +4,9 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.myiy.shoppingmemo.domain.main.dao.ShoppingListDao;
 import com.myiy.shoppingmemo.domain.main.model.ShoppingList;
+import com.myiy.shoppingmemo.service.RealmUtils;
 
 import io.realm.Realm;
 
@@ -14,6 +16,7 @@ public class MainViewModel extends ViewModel {
 
     public MainViewModel() {
         mDb = Realm.getDefaultInstance();
+        subscribeRecentShoppingList();
     }
 
     public LiveData<ShoppingList> getShoppingList() {
@@ -24,5 +27,9 @@ public class MainViewModel extends ViewModel {
     protected void onCleared() {
         mDb.close();
         super.onCleared();
+    }
+
+    private void subscribeRecentShoppingList() {
+        shoppingListLiveData.setValue(RealmUtils.shoppingListModel(mDb).findShoppingListRecent());
     }
 }

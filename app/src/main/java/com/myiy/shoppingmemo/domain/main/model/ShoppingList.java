@@ -1,5 +1,7 @@
 package com.myiy.shoppingmemo.domain.main.model;
 
+import com.myiy.shoppingmemo.domain.main.dao.ShoppingListDao;
+
 import io.realm.RealmModel;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
@@ -12,6 +14,16 @@ public class ShoppingList extends RealmObject {
     private String itemName;
     private long amt;
     private String url;
+
+    public ShoppingList() {}
+
+    public ShoppingList(long shoppingId, long itemId, String itemName, long amt, String url) {
+        this.shoppingId = shoppingId;
+        this.itemId = itemId;
+        this.itemName = itemName;
+        this.amt = amt;
+        this.url = url;
+    }
 
     public long getShoppingId() {
         return shoppingId;
